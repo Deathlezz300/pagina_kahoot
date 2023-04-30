@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+.box-login{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #E4B2B2;
+}
+
+.logo-login{
+    width: 55%;
+}
+
+.box-form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 25%;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-info-login{
+    padding-top: 1.5rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding-bottom: 1.5rem;
+    border-radius: 10px;
+    gap: 10px;
+}
+
+.input-form{
+    width: 92%;
+    height: 50px;
+    outline: none;
+    font-family: 'Montserrat', sans-serif;
+    border: 2px solid lightgrey;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #3d3d3d;
+    transition: .2s ease-in-out;
+}
+
+.input-form::placeholder{
+    color: lightslategray;
+    font-weight: 600;
+}
+
+.input-form:focus{
+    border: 2px solid #333333;
+}
+
+.boton-login{
+    width: 92%;
+    height: 50px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: white;
+    background-color: rgb(51, 51, 51);
+    border-radius: 5px;
+    border: none;
+    font-size: 1.1rem;
+    cursor: pointer;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px -4px inset;
+    transition: .1s ease-in-out;
+}
+
+.boton-login:hover{
+    height: 48px;
+    background-color: #2e2e2e;
+}
+
+@media screen and (max-width:1000px){
+    .box-form{
+        width: 35%;
+    }
+}
+
+@media screen and (max-width:800px){
+    .box-form{
+        width: 45%;
+    }
+}
+
+@media screen and (max-width:600px){
+    .box-form{
+        width: 65%;
+    }
+}
+
+@media screen and (max-width:400px){
+    .box-form{
+        width: 80%;
+    }
+}

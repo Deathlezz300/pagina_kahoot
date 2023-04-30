@@ -1,0 +1,12 @@
+.head-logo{
+    width: 100%;
+    display: flex;
+    border: 1px solid black;
+    height: 76px;
+}
+
+.logo{
+    width: 90px;
+    height: 100%;
+    margin-left: 1rem;
+}

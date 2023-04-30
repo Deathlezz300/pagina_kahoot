@@ -1,0 +1,38 @@
+.pregunta-box{
+    width: 100%;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2.1rem;
+    padding-bottom: 2.1rem;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.texto-opcion{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1.6rem;
+    color: white;
+}
+
+.color_1{
+    background-color: #E21B3C;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px -0.25rem 0px 0px inset;
+}
+
+.color_2{
+    background-color: #1368CE;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px -0.25rem 0px 0px inset
+}
+
+.color_3{
+    background-color: #D89E00;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px -0.25rem 0px 0px inset;
+}
+
+.color_4{
+    background-color: #26890C;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px -0.25rem 0px 0px inset;
+}
