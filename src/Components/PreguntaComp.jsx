@@ -1,8 +1,7 @@
-import { useNavigate } from "react-router-dom"
+
 import { useDispatch } from "react-redux";
 import { AddRespuesta, IncrementPosicion } from "../store/VetQuiz/VetQuizSlice";
 import '../assets/css/PreguntaComp.css'
-import { useSelector } from "react-redux";
 import { DeshabilitarBotones } from "../Helpers/StylesAnimation";
 
 const EstilosOpciones=[
@@ -20,16 +19,16 @@ const EstilosOpciones=[
     }
 ]
 
-export const PreguntaComp = ({id,indice,respuesta,opcion}) => {
+export const PreguntaComp = ({id,indice,respuesta,opcion,Referencia}) => {
 
 
   const dispatch=useDispatch();
 
-  const {tiempo}=useSelector(state=>state.VetQuiz);
 
-  const onClickOpcion=({target})=>{
-    const decision= respuesta===opcion ? true : false;
-    DeshabilitarBotones();
+  const onClickOpcion=()=>{
+    Referencia();
+    const decision=respuesta===opcion ? true : false;
+    DeshabilitarBotones(decision);
     const RespuestaToRedux={
         idPregunta:id,
         respuestaCorrecta:respuesta,
@@ -41,7 +40,7 @@ export const PreguntaComp = ({id,indice,respuesta,opcion}) => {
   }
 
   return (
-    <button id={indice} disabled={tiempo===0 ? true : false} onClick={onClickOpcion} className={`pregunta-box ${EstilosOpciones[indice].color}`}>
+    <button id={indice} onClick={onClickOpcion} className={`pregunta-box ${EstilosOpciones[indice].color}`}>
         <img className="figura" src="" alt=""/>
         <p className="texto-opcion">{opcion}</p>
     </button>

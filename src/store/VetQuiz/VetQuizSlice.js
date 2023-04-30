@@ -1,10 +1,10 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { preguntasData } from '../../Helpers/Data';
+import { seleccionarPreguntas } from '../../Helpers/Data';
 
 export const VetQuizSlice = createSlice({
     name: 'VetQuiz',
     initialState: {
-      preguntas:preguntasData,
+      preguntas:seleccionarPreguntas(),
       posicion:0,
       usuario:null,
       active:{opciones:[]},
@@ -27,10 +27,13 @@ export const VetQuizSlice = createSlice({
         },
         RestarTiempo:(state)=>{
             state.tiempo=state.tiempo-1;
+        },
+        ReestablecerTiempo:(state)=>{
+            state.tiempo=60;
         }
     }
 });
 
 
 // Action creators are generated for each case reducer function
-export const { setUsuario,IncrementPosicion,setActive,AddRespuesta,RestarTiempo } = VetQuizSlice.actions;
+export const { setUsuario,IncrementPosicion,setActive,AddRespuesta,RestarTiempo,ReestablecerTiempo } = VetQuizSlice.actions;
