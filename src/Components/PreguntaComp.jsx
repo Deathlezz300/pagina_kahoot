@@ -1,6 +1,6 @@
 
 import { useDispatch } from "react-redux";
-import { AddRespuesta, IncrementPosicion } from "../store/VetQuiz/VetQuizSlice";
+import { AddRespuesta, AumentarCorrectas, AumentarIncorrectas, IncrementPosicion } from "../store/VetQuiz/VetQuizSlice";
 import '../assets/css/PreguntaComp.css'
 import { DeshabilitarBotones } from "../Helpers/StylesAnimation";
 
@@ -29,6 +29,11 @@ export const PreguntaComp = ({id,indice,respuesta,opcion,Referencia}) => {
     Referencia();
     const decision=respuesta===opcion ? true : false;
     DeshabilitarBotones(decision);
+    if(decision){
+        dispatch(AumentarCorrectas());
+    }else{
+        dispatch(AumentarIncorrectas());
+    }
     const RespuestaToRedux={
         idPregunta:id,
         respuestaCorrecta:respuesta,

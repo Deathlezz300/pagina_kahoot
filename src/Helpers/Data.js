@@ -5,6 +5,8 @@ export const seleccionarPreguntas=()=>{
         let numAleatorio=Math.floor(Math.random()*27);
         if(!yaGenerados.includes(numAleatorio)){
             preguntas.push(preguntasData[numAleatorio])
+        }else{
+            s--;
         }
         yaGenerados.push(numAleatorio);
     }

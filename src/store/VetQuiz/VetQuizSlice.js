@@ -9,7 +9,9 @@ export const VetQuizSlice = createSlice({
       usuario:null,
       active:{opciones:[]},
       respuestas:[],
-      tiempo:60
+      tiempo:60,
+      correctas:0,
+      incorrectas:0
     },
     reducers: {
         setUsuario:(state,{payload})=>{
@@ -30,10 +32,16 @@ export const VetQuizSlice = createSlice({
         },
         ReestablecerTiempo:(state)=>{
             state.tiempo=60;
+        },
+        AumentarCorrectas:(state)=>{
+            state.correctas=state.correctas+1;
+        },
+        AumentarIncorrectas:(state)=>{
+            state.incorrectas=state.incorrectas+1;
         }
     }
 });
 
 
 // Action creators are generated for each case reducer function
-export const { setUsuario,IncrementPosicion,setActive,AddRespuesta,RestarTiempo,ReestablecerTiempo } = VetQuizSlice.actions;
+export const { setUsuario,IncrementPosicion,setActive,AddRespuesta,RestarTiempo,ReestablecerTiempo,AumentarCorrectas,AumentarIncorrectas } = VetQuizSlice.actions;

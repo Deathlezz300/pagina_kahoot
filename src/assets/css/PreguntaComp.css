@@ -41,3 +41,11 @@
     background-color: #26890C;
     box-shadow: rgba(0, 0, 0, 0.15) 0px -0.25rem 0px 0px inset;
 }
+
+@media screen and (max-width:500px){
+ 
+    .texto-opcion{
+        font-size: 1.2rem;
+    }
+    
+}
