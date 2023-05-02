@@ -1,0 +1,116 @@
+.box-resultados-img{
+    width: 60%;
+    display: flex;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+}
+
+.box-padre-resultados{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    background-color: #E4B2B2;
+}
+
+.box-img-results-padre{
+    display: flex;
+    gap: 60px;
+    padding-top: .5rem;
+}
+
+.img-resultados{
+    width: 120px;
+}
+
+.box-img-resultados{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.usuario-resultados{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    padding: 1.1rem;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    font-size: 1.6rem;
+    background-color: rgb(51, 51, 51);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px -4px inset;
+}
+
+.texto-resultados{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: black;
+    padding-top: .3rem;
+    font-size: 1.2rem;
+}
+
+.texto-img-resultados{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: black;
+}
+
+.box-resultados-corr{
+    padding-bottom: 2rem;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+@media screen and (max-width:900px) {
+    .box-resultados-corr{
+        width: 80%;
+    }
+
+    .box-resultados-img{
+        width: 80%;
+    }
+}
+
+@media screen and (max-width:700px) {
+    .box-resultados-corr{
+        width: 90%;
+    }
+
+    .box-resultados-img{
+        width: 90%;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .box-resultados-corr{
+        width: 95%;
+    }
+
+    .box-resultados-img{
+        width: 95%;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .box-resultados-corr{
+        width: 97%;
+    }
+
+    .box-resultados-img{
+        width: 97%;
+    }
+
+    .box-img-results-padre{
+        gap: 30px;
+    }
+}

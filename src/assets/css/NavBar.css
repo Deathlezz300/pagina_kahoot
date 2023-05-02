@@ -1,8 +1,9 @@
 .head-logo{
     width: 100%;
     display: flex;
-    border: 1px solid black;
-    height: 76px;
+    background-color: #E4B2B2;
+    padding-top: .5rem;
+    padding-left: .5rem;
 }
 
 .logo{

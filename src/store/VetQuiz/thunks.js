@@ -1,4 +1,5 @@
-import { setActive } from "./VetQuizSlice";
+import { seleccionarPreguntas } from "../../Helpers/Data";
+import { setActive, setPreguntas, setTipo } from "./VetQuizSlice";
 
 export const setActivePregunta=(id)=>{
     return (dispatch,getState)=>{
@@ -8,3 +9,10 @@ export const setActivePregunta=(id)=>{
     }
 }
 
+export const onSetPreguntasTipo=(tipo)=>{
+    return (dispatch)=>{
+        dispatch(setTipo(tipo));
+        const preguntas=seleccionarPreguntas(tipo);
+        dispatch(setPreguntas(preguntas));
+    }
+}

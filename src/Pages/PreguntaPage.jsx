@@ -21,7 +21,7 @@ export const PreguntaPage = () => {
 
   const dispatch=useDispatch();
 
-  const {tiempo,active,posicion}=useSelector(state=>state.VetQuiz);
+  const {tiempo,active,posicion,tipo}=useSelector(state=>state.VetQuiz);
 
   const navegacion=useNavigate();
 
@@ -67,8 +67,8 @@ export const PreguntaPage = () => {
         <img src={logo} alt="" className="imagen-logo-pregunta" />
         <p className="texto-tiempo">{tiempo}</p>
       </div>
-      <div className="box-pregunta">
-        <p id="pregunta" className="texto-pregunta">{active.pregunta}</p>
+      <div className={`box-pregunta ${tipo==='Verdadero o falso' ? 'box-pregunta-grande' : ''}`}>
+        <p id="pregunta" className={`texto-pregunta ${tipo==='Verdadero o falso' ? 'pregunta-grande' : ''}`}>{active.pregunta}</p>
         <img className="imagen-respuesta" id="correcto" src={correcto} alt="" />
         <img className="imagen-respuesta" id="incorrecto" src={incorrecto} alt="" />
       </div>
@@ -76,13 +76,13 @@ export const PreguntaPage = () => {
         <div className="box-opciones">
           {
             active.opciones.map((opcion,indice)=>{
-              return <PreguntaComp key={indice} id={active.id} indice={indice} respuesta={active.respuesta} opcion={opcion} Referencia={()=>onStopIncrement()}/>
+              return <PreguntaComp key={indice} tipo={active.tipo} id={active.id} indice={indice} respuesta={active.respuesta} opcion={opcion} Referencia={()=>onStopIncrement()}/>
             })
           }
         </div>
       </section>
       <div className="box-boton-siguiente">
-        <Link to={ posicion<10 ? `/pregunta/${posicion}` : '/resultados'} replace type="button" onClick={onSiguientePregunta} id="boton-next" className="boton-siguiente btn-desaparecer">{posicion<10 ? 'Siguiente' : 'Terminar'}</Link>
+        <Link to={ posicion<7 ? `/pregunta/${posicion}` : '/resultados'} replace type="button" onClick={onSiguientePregunta} id="boton-next" className="boton-siguiente btn-desaparecer">{posicion<10 ? 'Siguiente' : 'Terminar'}</Link>
       </div>
     </section>
   )

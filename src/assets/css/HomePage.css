@@ -1,0 +1,102 @@
+.box-padre-home{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #E4B2B2;
+}
+
+.box-data-home{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    gap: 15px;
+}
+
+.user-home{
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-size: 2rem;
+    text-align: center;  
+}
+
+.texto-home{
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.box-botones-home{
+    width: 50%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-column-gap: 15px;
+    grid-row-gap: 20px;
+    grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
+}
+
+.boton-opciones-home{
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-weight: 600;
+    background-color: rgb(51, 51, 51);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px -4px inset;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+    height: 50px;
+    border-radius: 8px;
+}
+
+.logo-home{
+    width: 200px;
+}
+
+@media screen and (max-width:1000px){
+    .box-data-home{
+        width: 80%;
+    }
+
+    .box-botones-home{
+        width: 60%;
+    }
+}
+
+@media screen and (max-width:750px){
+    .box-data-home{
+        width: 80%;
+    }
+
+    .box-botones-home{
+        width: 80%;
+    }
+}
+
+@media screen and (max-width:520px){
+    .box-data-home{
+        width: 80%;
+    }
+
+    .box-botones-home{
+        width: 90%;
+    }
+}
+
+@media screen and (max-width:400px){
+    .box-data-home{
+        width: 90%;
+    }
+
+    .box-botones-home{
+        width: 90%;
+    }
+}

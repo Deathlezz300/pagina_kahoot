@@ -1,0 +1,70 @@
+.box-pregunta-espe{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    background-color: white;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.pregunta-resultados{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    background-color: rgb(218, 218, 218);
+    width: 90%;
+    text-align: justify;
+    border-radius: 10px;
+    padding-bottom: 1.5rem;
+    padding-top: 1.5rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    font-size: 1.1rem;
+}
+
+.texto-pregunta-resultados{
+    width: 89%;
+    font-family: 'Montserrat', sans-serif;
+    text-align: left;
+    font-weight: 600;
+    font-size: 1.2rem;
+    padding-bottom: .5rem;
+}
+
+.texto-opciones-resultados{
+    width: 89%;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1.2rem;
+    padding-top: .8rem;
+    padding-bottom: .5rem;
+}
+
+.box-opciones-result-fin{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+.color_verde{
+    background-color: green;
+    color: white;
+}
+
+.color_rojo{
+    background-color: red;
+    color: white;
+}
+
+@media screen and (max-width:400px) {
+    .pregunta-resultados{
+        font-size: .95rem;
+    }
+}

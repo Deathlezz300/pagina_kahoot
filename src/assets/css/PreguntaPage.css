@@ -113,6 +113,14 @@
     width: 100px;
 }
 
+.box-pregunta-grande{
+    min-height: 360px;
+}
+
+.pregunta-grande{
+    font-size: 2.4rem;
+}
+
 @media screen and (max-width:1000px){
     .boton-siguiente{
         width: 15%;

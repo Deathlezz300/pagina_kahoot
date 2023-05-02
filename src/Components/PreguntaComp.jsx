@@ -19,7 +19,7 @@ const EstilosOpciones=[
     }
 ]
 
-export const PreguntaComp = ({id,indice,respuesta,opcion,Referencia}) => {
+export const PreguntaComp = ({id,indice,respuesta,opcion,Referencia,tipo}) => {
 
 
   const dispatch=useDispatch();
@@ -45,7 +45,7 @@ export const PreguntaComp = ({id,indice,respuesta,opcion,Referencia}) => {
   }
 
   return (
-    <button id={indice} onClick={onClickOpcion} className={`pregunta-box ${EstilosOpciones[indice].color}`}>
+    <button id={indice} onClick={onClickOpcion} className={`pregunta-box ${EstilosOpciones[indice].color} ${tipo==='Verdadero o falso' ? 'pregunta-box-grande' : ''}`}>
         <img className="figura" src="" alt=""/>
         <p className="texto-opcion">{opcion}</p>
     </button>
